@@ -1,0 +1,285 @@
+*{
+	padding:0;
+	margin:0;
+	
+	box-sizing: border-box;
+}
+ul,ol{
+	list-style:none;
+}
+a{
+	text-decoration: none;
+}
+body{
+position: relative;
+    background: #f0f0f0;
+    font-family: 'roboto', sans-serif;
+			/*font-family: 'Open Sans', sans-serif;
+			font-family: 'Oswald', sans-serif;*/
+}
+*:focus{
+    outline: none;
+}
+
+
+
+.navbar{
+	position: fixed;
+	top: 0;
+	left:0;
+	width:100%;
+	height: 60px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	padding:0 2.5vw;
+}
+
+.search_box{
+    position: relative;
+    max-width: 450px;
+    width: 50%;
+    height: 35px;
+    display: flex;
+    margin-left: 255px;
+}
+.search_bar{
+    width: 85%;
+    height: 100%;
+    border: 2px solid #dbdbdb;
+    padding: 0 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.search_btn{
+    width: 15%;
+    height: 100%;
+    background: #f0f0f0;
+    border: 2px solid #dbdbdb;
+    padding: 5px 0;
+    border-left: none;
+}
+
+.search_btn img{
+    height: 100%;
+}
+
+.icon_bar{
+	height: 55%;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+     border: 1px solid #dbdbdb;
+     padding:5px;
+   
+    
+}
+.user_options{
+    height: 35px;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+.user_options .icon{
+    height: 80%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.user_dp{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.user_dp img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.toggle_icon{
+    width: 20px;
+    height: 10px;
+    position: relative;
+    cursor: pointer;
+     margin-right: 20px;
+}
+
+
+.toggle_icon span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #979797;
+}
+
+.toggle_icon span:nth-child(1){
+    top: 0;
+}
+
+.toggle_icon span:nth-child(3){
+    top: 100%;
+}
+/*sidebar css part start */
+
+.side_bar{
+	position:fixed;
+	top:60px;
+	left:0;
+	padding-right:20px;
+	width:250px;
+	min-width: 250px;
+	height: calc(100vh - 60px);
+	background-color: #fff;
+}
+
+
+
+
+.links{
+	display: block;
+	padding:10px 20px;
+	display: flex;
+	width:100%;
+	align-items: center;
+	  text-transform: capitalize;
+	  color: #242424;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+
+
+}
+.links img{
+    height: 25px;
+    margin-right: 20px;
+}
+
+.links:hover,
+.links.active{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.seperator{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+/*sidebar css part end */
+/*filters css part start */
+.filters{
+    position: fixed;
+    left: 250px;
+    top: 60px;
+   /* width: calc(100% - 250px);*/
+    height: 60px;
+    background: #fff;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 13px;
+    display: flex;
+    align-items: center;
+    overflow-x:auto;
+    overflow-y: hidden;
+}
+
+.filters::-webkit-scrollbar{
+    display:none;
+}
+
+.filter_options{
+    flex: 0 0 auto;
+    padding: 10px 15px;
+    border-radius: 40px;
+    background: #f0f0f0;
+    border: 1px solid #dbdbdb;
+    text-transform: capitalize;
+    margin-right: 10px;
+    color: #242424;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.filter_options.active{
+    color: #fff;
+    background: #242424;
+}
+.filter_options:hover,
+.filter_options.active{
+    color: #fff;
+    background: #242424;
+}
+
+/*filters css part end */
+/*vedio container css part start */
+.videos{
+	background-color:#f9f9f9;
+    padding:10px 20px;
+	border-top:1px solid #ddd;
+	overflow-y: scroll;
+	overflow-x: hidden;
+    position:absolute;
+    left:19%;
+    top:118px;
+     width:81%;
+    height:100vh;
+   
+
+}
+.videos_container{
+	
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	flex-wrap: wrap;
+
+}
+.video{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width:300px;
+	transform: scaleY(1);
+	transition: all linear .3s;
+	
+}
+.video_thumbnail{
+	height: 170px;
+	width:100%;
+}
+.video_thumbnail img{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	
+}
+.author img{
+	object-fit: cover;
+	margin-right: 10px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+.video_details{
+	display: flex;
+	margin-top: 10px;
+}
+.tittle{
+	display: flex;
+	flex-direction: column;
+}
+.video:hover{
+	transform: scaleY(1.5);
+	transition: all linear .3s;
+	font-size: 10px;
+	z-index:1;
+	background-color: #dbdbdb;
+	
+	
+
+}
+.tittle h5{
+	font-size: 15px;
+}
+/*vedio container css part end */
